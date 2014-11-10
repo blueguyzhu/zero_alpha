@@ -1,0 +1,18 @@
+
+/* Class = "IBUIButton"; normalTitle = "Settings"; ObjectID = "5A9-Tw-g2t"; */
+"5A9-Tw-g2t.normalTitle" = "inställningar";
+
+/* Class = "IBUIButton"; normalTitle = "To Tempus Go"; ObjectID = "AR4-Ku-hAk"; */
+"AR4-Ku-hAk.normalTitle" = "Till Tempus Go";
+
+/* Class = "IBUITextField"; text = "122455"; ObjectID = "WeN-tp-K3i"; */
+"WeN-tp-K3i.text" = "";
+
+/* Class = "IBUISegmentedControl"; Wm8-oS-06V.segmentTitles[0] = "on"; ObjectID = "Wm8-oS-06V"; */
+"Wm8-oS-06V.segmentTitles[0]" = "on";
+
+/* Class = "IBUISegmentedControl"; Wm8-oS-06V.segmentTitles[1] = "off"; ObjectID = "Wm8-oS-06V"; */
+"Wm8-oS-06V.segmentTitles[1]" = "off";
+
+/* Class = "IBUILabel"; text = "Tempus Zero"; ObjectID = "nn6-7g-FM8"; */
+"nn6-7g-FM8.text" = "Tempus Zero";

@@ -1,0 +1,18 @@
+/* 
+  Localizable.strings
+  TempusZero_Alpha
+
+  Created by Wenlu Zhang on 03/11/14.
+  Copyright (c) 2014 TEMPUS. All rights reserved.
+*/
+
+"SEL_EMPLOYEE" = "select employee number";
+"SEL_EMPLOYEE_FIRST" = "select employee number first";
+"SEL_LOC" = "select location";
+"OK" = "OK";
+"NET_FAILS" = "network failure";
+"DATA_PARSE_FAILS" = "data error";
+"NET_FAIL_TRY_AGAIN" = "Check your internet connection and try again!";
+"GEOCODE_FAIL" = "Geocoding address %@ fails.";
+"SAVE_BTN_TITLE" = "save";
+"CHECK_LOCATION" = "check locations";

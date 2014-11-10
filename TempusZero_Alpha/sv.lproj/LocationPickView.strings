@@ -1,0 +1,12 @@
+
+/* Class = "IBUILabel"; text = "Valhallavägen 159, 11553 Stockholm"; ObjectID = "Qlx-VL-62n"; */
+"Qlx-VL-62n.text" = "Valhallavägen 159, 11553 Stockholm";
+
+/* Class = "IBUIButton"; normalTitle = "Save"; ObjectID = "Ubk-wW-goY"; */
+"Ubk-wW-goY.normalTitle" = "spara";
+
+/* Class = "IBUIButton"; normalTitle = "Use this address:"; ObjectID = "kRY-Z8-zKQ"; */
+"kRY-Z8-zKQ.normalTitle" = "använder denna adress";
+
+/* Class = "IBUITextField"; text = "........"; ObjectID = "mw9-A5-biY"; */
+"mw9-A5-biY.text" = "........";

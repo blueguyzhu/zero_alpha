@@ -1,0 +1,18 @@
+/* 
+  Localizable.strings
+  TempusZero_Alpha
+
+  Created by Wenlu Zhang on 03/11/14.
+  Copyright (c) 2014 TEMPUS. All rights reserved.
+*/
+
+"SEL_EMPLOYEE" = "velg ansattnummer";
+"SEL_EMPLOYEE_FIRST" = "velg ansattnummer första";
+"SEL_LOC" = "velg lokasjon";
+"OK" = "OK";
+"NET_FAILS" = "nettverksfeil";
+"DATA_PARSE_FAILS" = "datafeil";
+"NET_FAIL_TRY_AGAIN" = "sjekk internettet ditt og prøve en gang til";
+"GEOCODE_FAIL" = "Geokoding adressen %@ feiler.";
+"SAVE_BTN_TITLE" = "spar";
+"CHECK_LOCATION" = "sjekk lokasjon";
