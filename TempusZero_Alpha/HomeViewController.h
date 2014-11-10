@@ -10,11 +10,12 @@
 
 @interface HomeViewController : UIViewController
 
-@property (nonatomic, weak) IBOutlet UITextField *msgTextField;
+//@property (nonatomic, weak) IBOutlet UITextField *msgTextField;
+@property (nonatomic, weak) IBOutlet UITextView *msgTextView;
 @property (nonatomic, weak) IBOutlet UISegmentedControl *switchSegment;
 @property (nonatomic, weak) IBOutlet UIButton *toTempusGoBtn;
 @property (nonatomic, weak) IBOutlet UIButton *settingBtn;
 
 - (IBAction)toTempusGoBtnPressed:(id)sender;
-- (void) displayMsg: (NSString *)msg;
+- (void) displayMsg: (NSString *)msg atTime: (NSDate *)date;
 @end

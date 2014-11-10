@@ -5,6 +5,7 @@
 //  Created by Wenlu Zhang on 03/11/14.
 //  Copyright (c) 2014 TEMPUS. All rights reserved.
 //
+#define kMSG_CAPACITY   100
 
 #import "HomeViewController.h"
 #import "GeoManager.h"
@@ -12,6 +13,9 @@
 
 
 @interface HomeViewController ()
+
+@property (nonatomic, strong) NSMutableArray *msgQue;
+
 - (void) switchSegChange: (id)sender;
 @end
 
@@ -33,9 +37,11 @@
     _settingBtn.layer.cornerRadius = 5.0f;
     
     
-    _msgTextField.layer.borderWidth = 0.5f;
-    _msgTextField.layer.cornerRadius = 2.0f;
-    _msgTextField.layer.borderColor = [UIColor whiteColor].CGColor;
+    _msgTextView.layer.borderWidth = 0.5f;
+    _msgTextView.layer.cornerRadius = 2.0f;
+    _msgTextView.layer.borderColor = [UIColor whiteColor].CGColor;
+    
+    _msgQue = [[NSMutableArray alloc] initWithCapacity:kMSG_CAPACITY];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -60,9 +66,28 @@
     [[UIApplication sharedApplication] openURL:url];
 }
 
-- (void) displayMsg:(NSString *)msg
+- (void) displayMsg:(NSString *)msg atTime: (NSDate *)date
 {
-    [_msgTextField setText:msg];
+    NSDate *curDate = date;
+    if (!curDate) {
+        curDate = [NSDate date];
+    }
+    
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:@"MM/dd/yyyy HH:mm:ss "];
+    
+    NSString *strDate = [dateFormatter stringFromDate:curDate];
+    [_msgQue addObject: [strDate stringByAppendingString:msg]];
+    
+
+    NSMutableString *strBuilder = [[NSMutableString alloc] init];
+    
+    for (NSString *msg in _msgQue) {
+        [strBuilder appendString:msg];
+        [strBuilder appendString:@"\n"];
+    }
+    
+    [_msgTextView setText:strBuilder];
 }
 
 - (void) switchSegChange: (id)sender

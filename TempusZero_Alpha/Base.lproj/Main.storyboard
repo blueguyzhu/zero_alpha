@@ -18,13 +18,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Tempus Zero" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nn6-7g-FM8">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Tempus Zero" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nn6-7g-FM8">
                                 <rect key="frame" x="279" y="64" width="100" height="21"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
                                 <color key="textColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AR4-Ku-hAk">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AR4-Ku-hAk">
                                 <rect key="frame" x="251" y="456" width="99" height="30"/>
                                 <inset key="contentEdgeInsets" minX="5" minY="5" maxX="5" maxY="5"/>
                                 <state key="normal" title="To Tempus Go">
@@ -45,45 +45,50 @@
                                     <segue destination="Rn2-51-M6H" kind="show" id="ROI-gi-hu0"/>
                                 </connections>
                             </button>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Wm8-oS-06V">
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Wm8-oS-06V">
                                 <rect key="frame" x="275" y="354" width="61" height="29"/>
                                 <segments>
                                     <segment title="on"/>
                                     <segment title="off"/>
                                 </segments>
                             </segmentedControl>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WeN-tp-K3i">
-                                <rect key="frame" x="257" y="167" width="97" height="30"/>
-                                <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="0.0" colorSpace="calibratedRGB"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" text="Melding vil vise her" translatesAutoresizingMaskIntoConstraints="NO" id="no6-iA-poB">
+                                <rect key="frame" x="180" y="199" width="240" height="128"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="tiw-gj-8lT"/>
+                                </constraints>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                         <constraints>
-                            <constraint firstItem="WeN-tp-K3i" firstAttribute="top" secondItem="nn6-7g-FM8" secondAttribute="bottom" constant="82" id="7l5-i9-poU"/>
+                            <constraint firstAttribute="centerX" secondItem="no6-iA-poB" secondAttribute="centerX" id="5Iy-ZD-98h"/>
                             <constraint firstItem="5A9-Tw-g2t" firstAttribute="top" secondItem="AR4-Ku-hAk" secondAttribute="bottom" constant="50" id="8W8-1L-87e"/>
                             <constraint firstAttribute="centerX" secondItem="5A9-Tw-g2t" secondAttribute="centerX" id="Goz-mT-5Kf"/>
                             <constraint firstAttribute="centerX" secondItem="AR4-Ku-hAk" secondAttribute="centerX" id="IvD-Us-R7z"/>
                             <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="AR4-Ku-hAk" secondAttribute="trailing" constant="70" id="JIB-4J-6mS"/>
+                            <constraint firstItem="no6-iA-poB" firstAttribute="top" secondItem="nn6-7g-FM8" secondAttribute="bottom" constant="50" id="KVw-J6-R02"/>
                             <constraint firstItem="AR4-Ku-hAk" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="cUm-3U-hx3" secondAttribute="leadingMargin" constant="70" id="MSI-Fq-FMJ"/>
-                            <constraint firstItem="nn6-7g-FM8" firstAttribute="top" relation="greaterThanOrEqual" secondItem="sJL-B1-N4j" secondAttribute="bottom" constant="50" id="PXm-eA-MPq"/>
-                            <constraint firstItem="AR4-Ku-hAk" firstAttribute="top" relation="greaterThanOrEqual" secondItem="Wm8-oS-06V" secondAttribute="bottom" constant="50" id="R81-gO-7gm"/>
+                            <constraint firstItem="nn6-7g-FM8" firstAttribute="top" secondItem="sJL-B1-N4j" secondAttribute="bottom" constant="50" id="PXm-eA-MPq"/>
+                            <constraint firstItem="AR4-Ku-hAk" firstAttribute="top" secondItem="Wm8-oS-06V" secondAttribute="bottom" constant="50" id="R81-gO-7gm"/>
                             <constraint firstItem="nn6-7g-FM8" firstAttribute="leading" secondItem="cUm-3U-hx3" secondAttribute="leadingMargin" constant="50" id="RUI-m2-cCL"/>
-                            <constraint firstAttribute="centerX" secondItem="WeN-tp-K3i" secondAttribute="centerX" id="WhP-hU-5FV"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="no6-iA-poB" secondAttribute="trailing" id="SzW-RR-iGa"/>
                             <constraint firstItem="5A9-Tw-g2t" firstAttribute="top" secondItem="AR4-Ku-hAk" secondAttribute="bottom" constant="60" id="ZQC-tv-K7h"/>
-                            <constraint firstItem="WeN-tp-K3i" firstAttribute="leading" secondItem="cUm-3U-hx3" secondAttribute="leadingMargin" constant="1" id="c6h-zk-KdB"/>
                             <constraint firstAttribute="centerX" secondItem="Wm8-oS-06V" secondAttribute="centerX" id="eVh-hQ-D7r"/>
+                            <constraint firstItem="Wm8-oS-06V" firstAttribute="top" secondItem="no6-iA-poB" secondAttribute="bottom" constant="30" id="fhd-LU-8O2"/>
                             <constraint firstAttribute="centerX" secondItem="AR4-Ku-hAk" secondAttribute="centerX" id="hbo-Se-gWM"/>
-                            <constraint firstItem="5A9-Tw-g2t" firstAttribute="top" relation="greaterThanOrEqual" secondItem="AR4-Ku-hAk" secondAttribute="bottom" constant="50" id="ig9-vO-KxJ"/>
+                            <constraint firstItem="5A9-Tw-g2t" firstAttribute="top" secondItem="AR4-Ku-hAk" secondAttribute="bottom" constant="50" id="ig9-vO-KxJ"/>
+                            <constraint firstItem="no6-iA-poB" firstAttribute="leading" secondItem="cUm-3U-hx3" secondAttribute="leadingMargin" id="kwI-61-jqx"/>
                             <constraint firstAttribute="trailingMargin" secondItem="nn6-7g-FM8" secondAttribute="trailing" constant="50" id="mzw-DD-4z7"/>
-                            <constraint firstItem="4aW-Fv-NpY" firstAttribute="top" secondItem="5A9-Tw-g2t" secondAttribute="bottom" constant="60" id="qsT-aO-PR7"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="WeN-tp-K3i" secondAttribute="trailing" constant="1" id="yuW-PQ-Pzo"/>
+                            <constraint firstItem="4aW-Fv-NpY" firstAttribute="top" secondItem="5A9-Tw-g2t" secondAttribute="bottom" constant="50" id="qsT-aO-PR7"/>
                             <constraint firstAttribute="centerX" secondItem="nn6-7g-FM8" secondAttribute="centerX" id="zhl-7m-qnd"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
+                                <exclude reference="5Iy-ZD-98h"/>
                                 <exclude reference="IvD-Us-R7z"/>
                                 <exclude reference="8W8-1L-87e"/>
                                 <exclude reference="ZQC-tv-K7h"/>
@@ -92,10 +97,11 @@
                     </view>
                     <navigationItem key="navigationItem" id="r7Z-qc-PKn"/>
                     <connections>
-                        <outlet property="msgTextField" destination="WeN-tp-K3i" id="NMA-sy-owg"/>
+                        <outlet property="msgTextView" destination="no6-iA-poB" id="O3K-XA-A92"/>
                         <outlet property="settingBtn" destination="5A9-Tw-g2t" id="29R-VZ-ty8"/>
                         <outlet property="switchSegment" destination="Wm8-oS-06V" id="HJT-GC-0kF"/>
                         <outlet property="toTempusGoBtn" destination="AR4-Ku-hAk" id="OOd-oh-LOS"/>
+                        <outlet property="view" destination="cUm-3U-hx3" id="rKY-YK-onV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jwr-ii-2QU" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -143,6 +143,7 @@
     SiteInfo *siteInfo = [_monitoredRegions objectForKey: region.identifier];
 //    [_homeVC displayMsg:[NSString stringWithFormat:@"Start to monitor %@", siteInfo.addr]];
     [WLLog logWithLevel:INFO withTime:nil withContent:@"Start to monitor %@", siteInfo.addr];
+    [_homeVC displayMsg:[NSString stringWithFormat:@"Start to monitor %@", siteInfo.addr] atTime:nil];
 //    [_locMngr requestStateForRegion:region];
 }
 
@@ -150,13 +151,13 @@
 - (void) locationManager:(CLLocationManager *)manager monitoringDidFailForRegion:(CLRegion *)region withError:(NSError *)error
 {
     SiteInfo *siteInfo = [_monitoredRegions objectForKey: region.identifier];
-    [_homeVC displayMsg:[NSString stringWithFormat:@"Failed to monitor %@", siteInfo.addr]];
+    [_homeVC displayMsg:[NSString stringWithFormat:@"Failed to monitor %@", siteInfo.addr] atTime:nil];
 }
 
 
 - (void) locationManager: (CLLocationManager *)manager didFailWithError:(NSError *)error
 {
-    [_homeVC displayMsg:[NSString stringWithFormat:@"ERROR: %@", error.localizedDescription]];
+    [_homeVC displayMsg:[NSString stringWithFormat:@"ERROR: %@", error.localizedDescription] atTime:nil];
 }
 
 - (void) locationManager:(CLLocationManager *)manager didEnterRegion:(CLRegion *)region
@@ -170,7 +171,8 @@
     
     NSDictionary *dict = [ZeroNetServices regEntry:entryInfo];
     if ([dict objectForKeyedSubscript:@"err"]) {
-        [_homeVC displayMsg:[NSString stringWithFormat:@"In region! ERROR: %@", [dict objectForKeyedSubscript:@"err"]]];
+        [_homeVC displayMsg:[NSString stringWithFormat:@"In region! ERROR: %@", [dict objectForKeyedSubscript:@"err"]]
+                     atTime:nil];
         return;
     }
     
@@ -179,12 +181,13 @@
     
     if ([httpRep statusCode] != 200) {
         NSString *decodedData = [[NSString alloc] initWithData:repData encoding:NSUTF8StringEncoding];
-        [_homeVC displayMsg:[NSString stringWithFormat:@"ERROR: Bad Http request. \n %@ \n %@", httpRep, decodedData]];
+        [_homeVC displayMsg:[NSString stringWithFormat:@"ERROR: Bad Http request. \n %@ \n %@", httpRep, decodedData]
+                     atTime:nil];
         
         return;
     }
     
-    [_homeVC displayMsg:[NSString stringWithFormat:@"Inn %@", siteInfo.addr]];
+    [_homeVC displayMsg:[NSString stringWithFormat:@"Inn %@", siteInfo.addr] atTime:nil];
 }
 
 
@@ -199,7 +202,8 @@
     
     NSDictionary *dict = [ZeroNetServices regEntry:entryInfo];
     if ([dict objectForKeyedSubscript:@"err"]) {
-        [_homeVC displayMsg:[NSString stringWithFormat:@"Ut region! ERROR: %@", [dict objectForKeyedSubscript:@"err"]]];
+        [_homeVC displayMsg:[NSString stringWithFormat:@"Ut region! ERROR: %@", [dict objectForKeyedSubscript:@"err"]]
+                     atTime:nil];
         return;
     }
     
@@ -208,12 +212,13 @@
     
     if ([httpRep statusCode] != 200) {
         NSString *decodedData = [[NSString alloc] initWithData:repData encoding:NSUTF8StringEncoding];
-        [_homeVC displayMsg:[NSString stringWithFormat:@"ERROR: Bad Http request. \n %@ \n %@", httpRep, decodedData]];
+        [_homeVC displayMsg:[NSString stringWithFormat:@"ERROR: Bad Http request. \n %@ \n %@", httpRep, decodedData]
+                     atTime:nil];
         
         return;
     }
     
-    [_homeVC displayMsg:[NSString stringWithFormat:@"Ut %@", siteInfo.addr]];
+    [_homeVC displayMsg:[NSString stringWithFormat:@"Ut %@", siteInfo.addr] atTime:nil];
 }
 
 
@@ -221,7 +226,7 @@
 {
     if (state == CLRegionStateInside) {
         SiteInfo *siteInfo = [_monitoredRegions objectForKey:region.identifier];
-        [_homeVC displayMsg:[NSString stringWithFormat:@"Inn %@", siteInfo.addr]];
+        [_homeVC displayMsg:[NSString stringWithFormat:@"Inn %@", siteInfo.addr] atTime:nil];
         
         EntryInfo *entryInfo = [[EntryInfo alloc] init];
         entryInfo.siteId = siteInfo.siteId;
@@ -230,7 +235,8 @@
         
         NSDictionary *dict = [ZeroNetServices regEntry:entryInfo];
         if ([dict objectForKeyedSubscript:@"err"]) {
-            [_homeVC displayMsg:[NSString stringWithFormat:@"In region! ERROR: %@", [dict objectForKeyedSubscript:@"err"]]];
+            [_homeVC displayMsg:[NSString stringWithFormat:@"In region! ERROR: %@", [dict objectForKeyedSubscript:@"err"]]
+                         atTime:nil];
             return;
         }
         
@@ -239,12 +245,13 @@
         
         if ([httpRep statusCode] != 200) {
             NSString *decodedData = [[NSString alloc] initWithData:repData encoding:NSUTF8StringEncoding];
-            [_homeVC displayMsg:[NSString stringWithFormat:@"ERROR: Bad Http request. \n %@ \n %@", httpRep, decodedData]];
+            [_homeVC displayMsg:[NSString stringWithFormat:@"ERROR: Bad Http request. \n %@ \n %@", httpRep, decodedData]
+                         atTime:nil];
             
             return;
         }
         
-        [_homeVC displayMsg:[NSString stringWithFormat:@"Ligger på %@", siteInfo.addr]];
+        [_homeVC displayMsg:[NSString stringWithFormat:@"Ligger på %@", siteInfo.addr] atTime:nil];
     }
 }
 
