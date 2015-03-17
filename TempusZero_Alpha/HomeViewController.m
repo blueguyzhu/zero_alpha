@@ -36,7 +36,7 @@
     _settingBtn.layer.borderColor = _settingBtn.titleLabel.textColor.CGColor;
     _settingBtn.layer.cornerRadius = 5.0f;
     
-    
+    [_msgTextView setUserInteractionEnabled:NO];
     _msgTextView.layer.borderWidth = 0.5f;
     _msgTextView.layer.cornerRadius = 2.0f;
     _msgTextView.layer.borderColor = [UIColor whiteColor].CGColor;
@@ -48,6 +48,7 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
 
 /*
 #pragma mark - Navigation

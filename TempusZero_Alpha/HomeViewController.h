@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface HomeViewController : UIViewController
+@interface HomeViewController : UIViewController 
 
 //@property (nonatomic, weak) IBOutlet UITextField *msgTextField;
 @property (nonatomic, weak) IBOutlet UITextView *msgTextView;
