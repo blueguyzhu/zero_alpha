@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="elE-l9-5Ga">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="elE-l9-5Ga">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
@@ -24,7 +24,7 @@
                                 <color key="textColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AR4-Ku-hAk">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AR4-Ku-hAk">
                                 <rect key="frame" x="251" y="456" width="99" height="30"/>
                                 <inset key="contentEdgeInsets" minX="5" minY="5" maxX="5" maxY="5"/>
                                 <state key="normal" title="To Tempus Go">
@@ -45,14 +45,14 @@
                                     <segue destination="Rn2-51-M6H" kind="show" id="ROI-gi-hu0"/>
                                 </connections>
                             </button>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Wm8-oS-06V">
+                            <segmentedControl hidden="YES" opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Wm8-oS-06V">
                                 <rect key="frame" x="275" y="354" width="61" height="29"/>
                                 <segments>
                                     <segment title="on"/>
                                     <segment title="off"/>
                                 </segments>
                             </segmentedControl>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" text="Melding vil vise her" translatesAutoresizingMaskIntoConstraints="NO" id="no6-iA-poB">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" keyboardDismissMode="interactive" text="Melding vil vise her" translatesAutoresizingMaskIntoConstraints="NO" id="no6-iA-poB">
                                 <rect key="frame" x="180" y="199" width="240" height="128"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -60,7 +60,7 @@
                                 </constraints>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done"/>
                             </textView>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -80,7 +80,7 @@
                             <constraint firstAttribute="centerX" secondItem="Wm8-oS-06V" secondAttribute="centerX" id="eVh-hQ-D7r"/>
                             <constraint firstItem="Wm8-oS-06V" firstAttribute="top" secondItem="no6-iA-poB" secondAttribute="bottom" constant="30" id="fhd-LU-8O2"/>
                             <constraint firstAttribute="centerX" secondItem="AR4-Ku-hAk" secondAttribute="centerX" id="hbo-Se-gWM"/>
-                            <constraint firstItem="5A9-Tw-g2t" firstAttribute="top" secondItem="AR4-Ku-hAk" secondAttribute="bottom" constant="50" id="ig9-vO-KxJ"/>
+                            <constraint firstItem="5A9-Tw-g2t" firstAttribute="top" relation="lessThanOrEqual" secondItem="AR4-Ku-hAk" secondAttribute="bottom" constant="50" id="ig9-vO-KxJ"/>
                             <constraint firstItem="no6-iA-poB" firstAttribute="leading" secondItem="cUm-3U-hx3" secondAttribute="leadingMargin" id="kwI-61-jqx"/>
                             <constraint firstAttribute="trailingMargin" secondItem="nn6-7g-FM8" secondAttribute="trailing" constant="50" id="mzw-DD-4z7"/>
                             <constraint firstItem="4aW-Fv-NpY" firstAttribute="top" secondItem="5A9-Tw-g2t" secondAttribute="bottom" constant="50" id="qsT-aO-PR7"/>
